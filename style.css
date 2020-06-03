@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'starwars';
+    src: url('font/DISTGRG_.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'sansation';
+    src: url('font/Sansation-Regular.ttf') format('truetype');
+}
+
+body
+{
+  background: url('images/fond_jaune.png');
+  color: #181818;
+}
+
+h1, h1 + p
+{
+    text-align: center;
+}
+
+img
+{
+  float: right;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+
+h1
+{
+font-family: 'starwars', Arial, serif;
+text-transform: uppercase;
+}
+
+h2
+{
+font-family: 'starwars', Arial, serif;
+text-transform: uppercase;
+color: #6E4A46;
+}
+
+section
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 2%;
+}
+
+#liseret, #contenu
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#liseret
+{
+    width: 10%;
+    margin-right: 3%;
+    height: 500px;
+    background-image: url('images/lodyas.png');
+    border-radius: 10px;
+}
+
+#contenu
+{
+    width: 85%;
+}
+
+@media all and (max-width: 1024px)
+{
+    #liseret
+    {
+        display: none;
+    }
+
+    #contenu
+    {
+        width: auto;
+    }
+    
+    section
+    {
+        display: block;
+        width:auto;
+    }
