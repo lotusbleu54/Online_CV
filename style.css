@@ -10,20 +10,27 @@
 
 body
 {
-  background: url('images/fond_jaune.png');
+  font-family: 'Trebuchet MS', Arial, sans-serif;
   color: #181818;
 }
 
+#bloc_page
+{
+  display:flex;
+  background-color: #EEEEEE;
+  max-width: 960px;
+  margin: auto;
+}
+
+
 h1, h1 + p
 {
-    text-align: center;
+    text-align: left;
 }
 
 img
 {
-  float: right;
-    border: 1px solid black;
-    box-shadow: 2px 2px 2px black;
+    border-radius: 96px;
 }
 
 h1
@@ -39,32 +46,42 @@ text-transform: uppercase;
 color: #6E4A46;
 }
 
-section
+em
 {
-    display: inline-block;
-    vertical-align: top;
-    width: 30%;
-    margin-right: 2%;
-}
-
-#liseret, #contenu
-{
-    display: inline-block;
-    vertical-align: top;
+  color: #00ACC1;
+  font-style: normal;
 }
 
 #liseret
 {
-    width: 10%;
+    width: 30%;
     margin-right: 3%;
-    height: 500px;
-    background-image: url('images/lodyas.png');
-    border-radius: 10px;
+    height: 700px;
+    background-color: #00ACC1;
+    text-align: center;
+}
+
+#contact
+{
+  display:flex;
+  justify-content:space-around;
+}
+
+#loisirs
+{
+  display:flex;
+  justify-content: space-around;
 }
 
 #contenu
 {
-    width: 85%;
+    width: 70%;
+}
+
+#logos_contact
+{
+  text-align: center;
+  margin-left: 5px;
 }
 
 @media all and (max-width: 1024px)
@@ -78,7 +95,7 @@ section
     {
         width: auto;
     }
-    
+
     section
     {
         display: block;
