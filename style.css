@@ -110,8 +110,27 @@ h3
     width: 150px;
     margin-right: 3%;
     height: auto;
-    background-color: #00ACC1;
     border-radius: 0.4rem;
+}
+
+#frontend, #backend, #Anglais
+{
+  background: linear-gradient(to right, #00ACC1 90%, #6E4A46 10%);
+}
+
+#Sass, #MySQL, #Python
+{
+  background: linear-gradient(to right, #00ACC1 70%, #6E4A46 30%);
+}
+
+#SEO, #Espagnol, #Chinois
+{
+  background: linear-gradient(to right, #00ACC1 50%, #6E4A46 50%);
+}
+
+#Java
+{
+  background: linear-gradient(to right, #00ACC1 40%, #6E4A46 60%);
 }
 
 em
