@@ -1,17 +1,18 @@
 @font-face {
-    font-family: 'starwars';
-    src: url('font/DISTGRG_.ttf') format('truetype');
+  font-family: 'Montserrat';
+  src: url('font/Montserrat-Regular.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'sansation';
-    src: url('font/Sansation-Regular.ttf') format('truetype');
+  font-family: 'sansation';
+  src: url('font/Sansation-Regular.ttf') format('truetype');
 }
 
 body
 {
-  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   color: #181818;
+  font-size: 1em;
 }
 
 #bloc_page
@@ -25,25 +26,42 @@ body
 
 h1, h1 + p
 {
-    text-align: left;
+  text-align: left;
+  line-height: 0.8em;
 }
 
-img
+.photo
 {
-    border-radius: 96px;
+  margin-top: 5px;
+  border-radius: 96px;
+  border-width:2px;
+  border-style:double;
+  border-color:#1E88E5;
 }
 
 h1
 {
-font-family: 'starwars', Arial, serif;
-text-transform: uppercase;
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+
+.cote
+{
+  background-color: #5D4037;
+  color: #00ACC1;
 }
 
 h2
 {
-font-family: 'starwars', Arial, serif;
-text-transform: uppercase;
-color: #6E4A46;
+  text-transform: uppercase;
+  color: #6E4A46;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+tr{
+  line-height: 1em;
+  font-size: 0,8em;
 }
 
 em
@@ -54,20 +72,19 @@ em
 
 #liseret
 {
-    width: 30%;
-    margin-right: 3%;
-    height: 700px;
-    background-color: #00ACC1;
-    text-align: center;
+  width: 30%;
+  margin-right: 3%;
+  height: 700px;
+  background-color: #00ACC1;
+  text-align: center;
 }
 
-#contact
+#perso2, #fun2, #A_propos2
 {
-  display:flex;
-  justify-content:space-around;
+  display:none;
 }
 
-#loisirs
+.loisirs
 {
   display:flex;
   justify-content: space-around;
@@ -75,29 +92,78 @@ em
 
 #contenu
 {
-    width: 70%;
+  width: 70%;
 }
 
-#logos_contact
+table
 {
-  text-align: center;
-  margin-left: 5px;
+  border-spacing: 10px;
+}
+
+.logo
+{
+  height: 30px;
+}
+
+a:link
+{
+  text-decoration: none;
+  color:black;
+}
+
+a:visited
+{
+color:black;
+}
+
+p
+{
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 @media all and (max-width: 1024px)
 {
-    #liseret
-    {
-        display: none;
-    }
+  #bloc_page
+  {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #EEEEEE;
+    max-width: 960px;
+    margin: auto;
+  }
 
-    #contenu
-    {
-        width: auto;
-    }
+#liseret
+{
+  width:100%;
+  height:auto;
+}
 
-    section
-    {
-        display: block;
-        width:auto;
-    }
+#perso, #A_propos, #fun
+{
+  display:none;
+}
+
+#contenu
+{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  height:auto;
+}
+
+#nom
+{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#perso2, #fun2, #A_propos2
+{
+  display:block;
+text-align: left;
+}
+
+}
