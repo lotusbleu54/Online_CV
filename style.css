@@ -3,46 +3,81 @@
   src: url('font/Montserrat-Regular.otf') format('opentype');
 }
 
-@font-face {
-  font-family: 'sansation';
-  src: url('font/Sansation-Regular.ttf') format('truetype');
-}
-
 body
 {
   font-family: 'Montserrat', Arial, sans-serif;
   color: #181818;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 #bloc_page
 {
   display:flex;
   background-color: #EEEEEE;
-  max-width: 960px;
+  max-width: 1200px;
   margin: auto;
 }
 
 
-h1, h1 + p
+#nom
 {
   text-align: left;
-  line-height: 0.8em;
+  line-height: 1rem;
 }
 
 .photo
 {
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 96px;
+  height: 200px;
+  max-width: 100%;
   border-width:2px;
   border-style:double;
   border-color:#1E88E5;
 }
 
+#competences
+{
+  display: flex;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+
+#cat1
+{
+  margin-right: 30px;
+}
+
 h1
 {
   text-transform: uppercase;
-  font-size: 1.6em;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#nom hr
+{
+  border-top: 0.2rem solid #00ACC1;
+  border-radius:0.1rem;
+  margin-left: 6px;
+  margin-bottom: 2rem;
+}
+
+hr
+{
+  border-top: 0.15rem solid #00ACC1;
+  margin-right: 6px;
+}
+
+#nom p
+{
+  margin-bottom: 0;
+}
+
+.categorie h2
+{
+  margin-bottom: 0;
 }
 
 .cote
@@ -55,13 +90,28 @@ h2
 {
   text-transform: uppercase;
   color: #6E4A46;
-    font-size: 1.3em;
-    line-height: 1.5em;
+    font-size: 1.4rem;
 }
 
-tr{
-  line-height: 1em;
-  font-size: 0,8em;
+h3
+{
+  text-transform: uppercase;
+  color: #6E4A46;
+    font-size: 1.2rem;
+}
+
+.incassable
+{
+  white-space: nowrap;
+}
+
+.progbar
+{
+    width: 150px;
+    margin-right: 3%;
+    height: auto;
+    background-color: #00ACC1;
+    border-radius: 0.4rem;
 }
 
 em
@@ -74,9 +124,12 @@ em
 {
   width: 30%;
   margin-right: 3%;
-  height: 700px;
+  height: auto;
   background-color: #00ACC1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #perso2, #fun2, #A_propos2
@@ -88,6 +141,7 @@ em
 {
   display:flex;
   justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 #contenu
@@ -111,6 +165,23 @@ a:link
   color:black;
 }
 
+#portfolio:link
+{
+  text-decoration: none;
+  color:blue;
+}
+
+#portfolio:visited
+{
+  text-decoration: none;
+  color:#609;
+}
+
+#portfolio:hover
+{
+  text-decoration: underline;
+}
+
 a:visited
 {
 color:black;
@@ -120,6 +191,12 @@ p
 {
   padding-left: 6px;
   padding-right: 6px;
+  font-size: 1rem;
+}
+
+#vcard, #xp, #diplome, #tools
+{
+    margin-right:25px; /*problème superposition affichage*/
 }
 
 @media all and (max-width: 1024px)
@@ -150,13 +227,13 @@ p
   display:flex;
   flex-direction: column;
   width:100%;
-  height:auto;
 }
 
 #nom
 {
   display:flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -164,6 +241,22 @@ p
 {
   display:block;
 text-align: left;
+}
+
+h1
+{
+margin-bottom: 1rem;
+}
+
+h2,h3
+{
+  margin-bottom: 0;
+}
+
+#nom hr
+{
+  margin-left: auto;
+  margin-right:auto;
 }
 
 }
