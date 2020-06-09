@@ -1,110 +1,214 @@
-@font-face {
+/*Ajout de la police Montserrat*/
+@font-face
+{
   font-family: 'Montserrat';
   src: url('font/Montserrat-Regular.otf') format('opentype');
 }
 
+/*Taille de police de référence*/
+html
+{
+  font-size: 100%;
+}
+
+/*Choix police d'écriture et choix couleur standard*/
 body
 {
   font-family: 'Montserrat', Arial, sans-serif;
   color: #181818;
-  font-size: 16px;
 }
 
+/*Affichage du liseret et du contenu en 2 blocs horizontaux sur 1200px (grand écran)*/
 #bloc_page
 {
   display:flex;
   background-color: #EEEEEE;
   max-width: 1200px;
-  margin: auto;
+  margin: auto; /*Centrage de la page */
 }
 
-
-#nom
+/*liseret de 30% de la page. Contenu centré et chaque catégorie espacée en hauteur*/
+#liseret
 {
-  text-align: left;
-  line-height: 1rem;
+  width: 30%;
+  background-color: #00ACC1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
 }
 
-.photo
+/*Reste du CV sur 70% de la page (grand écran)*/
+#contenu
+{
+  width: 70%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#photo
 {
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 96px;
-  height: 200px;
+  border-radius: 100px; /*Effet médaillon*/
+  height: 200px; /*Redimensionnement image*/
   max-width: 100%;
-  border-width:2px;
-  border-style:double;
-  border-color:#1E88E5;
+  border-width:4px;
+  border-style:solid;
+  border-color:#1E88E5; /*couleur légèrement différente liseret*/
 }
 
-#competences
+/*Blocs cachés sur grand écran*/
+#perso2, #fun2, #apropos2
 {
-  display: flex;
-  justify-content:flex-start;
-  flex-wrap:wrap;
+  display:none;
 }
 
-#cat1
-{
-  margin-right: 30px;
-}
-
-h1
-{
-  text-transform: uppercase;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-#nom hr
-{
-  border-top: 0.2rem solid #00ACC1;
-  border-radius:0.1rem;
-  margin-left: 6px;
-  margin-bottom: 2rem;
-}
-
-hr
-{
-  border-top: 0.15rem solid #00ACC1;
-  margin-right: 6px;
-}
-
-#nom p
-{
-  margin-bottom: 0;
-}
-
-.categorie h2
-{
-  margin-bottom: 0;
-}
-
+/*Couleur et fond différents pour les titres de section présents dans le liseret*/
 .cote
 {
   background-color: #5D4037;
   color: #00ACC1;
 }
 
+/*Style commun des titres h1, h2 et h3*/
+h1, h2, h3
+{
+  text-transform: uppercase;
+  color: #6E4A46;
+}
+
+/*Taille des titres*/
+h1
+{
+  font-size: 2.5rem;
+}
 h2
 {
-  text-transform: uppercase;
-  color: #6E4A46;
-    font-size: 1.4rem;
+  font-size: 1.6rem;
 }
-
 h3
 {
-  text-transform: uppercase;
-  color: #6E4A46;
-    font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
+/*Style pour les paragraphes*/
+p
+{
+  padding-left: 6px;
+  font-size: 1rem;
+}
+
+/*Prénom dans la couleur du liseret*/
+em
+{
+  color: #00ACC1;
+  font-style: normal; /*Annulation de la mise auto en italique*/
+}
+
+/*Pas de séparation entre le paragraphe de la partie "nom" et le séparateur*/
+#nom p
+{
+  margin-bottom: 0;
+}
+
+/*Mise en forme particulière du séparateur sous le nom*/
+#nom hr
+{
+  border: 0.1rem solid #00ACC1; /*Même couleur que liseret*/
+  margin-left: 6px; /*pour aligner avec le paragraphe au-dessus*/
+  margin-bottom: 3rem; /*Séparation avec partie suivante*/
+}
+
+/* Annulation de la marge sous les titre h2 inclus dans la classe catégorie
+afin d'afficher le trait de séparation juste en dessous*/
+.categorie h2
+{
+  margin-bottom: 0;
+}
+
+/*Règles générales pour les séparateurs*/
+hr
+{
+  border: 0.1rem solid #00ACC1;
+}
+
+/*éviter un retour à la ligne automatique sur ces objets*/
 .incassable
 {
   white-space: nowrap;
 }
 
+/*Assurer un espacement minimum entre les colonnes des tableaux*/
+table
+{
+  border-spacing: 10px;
+}
+
+/*Affichage flexible du bloc loisirs pour étaler les icônes fontawesome
+sur la place disponible. S'applique à la fois au bloc dans le liseret
+et dans le contenu si écran petit*/
+.loisirs
+{
+  display:flex;
+  justify-content: space-around;
+  margin-bottom: 20px; /*Assurer une marge minimale en bas de page*/
+}
+
+/*Forcer la hauteur des logos fontawesome*/
+.logo
+{
+  height: 30px;
+}
+
+/*Affichage flexible des compétences pour séparer la partie pro de la partie langues*/
+#competences
+{
+  display: flex;
+  justify-content:flex-start;
+  flex-wrap:wrap; /*Forcer le passage en vertical du bloc de langues si on dépasse la largeur du cadre*/
+}
+
+/* Assurer marge minimale entre partie pro et langues*/
+#pro
+{
+  margin-right: 30px;
+}
+
+/* Assurer marge minimale entre les icônes et les catégories*/
+#vcard, #xp, #diplome, #tools
+{
+    margin-right:30px;
+}
+
+/*Pas de mise en forme particulière pour les liens de la partie contact...*/
+a:link
+{
+  text-decoration: none;
+  color:#181818;
+}
+a:visited
+{
+color:#181818;
+}
+
+/*... Sauf pour le portfolio*/
+#portfolio:link
+{
+  text-decoration: none;
+  color:blue;
+}
+#portfolio:visited
+{
+  text-decoration: none;
+  color:#609;
+}
+#portfolio:hover
+{
+  text-decoration: underline;
+}
+
+/*Création des barres de progression pour les compétences pro et langues*/
 .progbar
 {
     width: 150px;
@@ -113,169 +217,68 @@ h3
     border-radius: 0.4rem;
 }
 
+/*Choix des pourcentages de dégradé*/
 #frontend, #backend, #Anglais
 {
   background: linear-gradient(to right, #00ACC1 90%, #6E4A46 10%);
 }
-
 #Sass, #MySQL, #Python
 {
   background: linear-gradient(to right, #00ACC1 70%, #6E4A46 30%);
 }
-
 #SEO, #Espagnol, #Chinois
 {
   background: linear-gradient(to right, #00ACC1 50%, #6E4A46 50%);
 }
-
 #Java
 {
   background: linear-gradient(to right, #00ACC1 40%, #6E4A46 60%);
 }
 
-em
-{
-  color: #00ACC1;
-  font-style: normal;
-}
 
-#liseret
-{
-  width: 30%;
-  margin-right: 3%;
-  height: auto;
-  background-color: #00ACC1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-#perso2, #fun2, #A_propos2
-{
-  display:none;
-}
-
-.loisirs
-{
-  display:flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-#contenu
-{
-  width: 70%;
-}
-
-table
-{
-  border-spacing: 10px;
-}
-
-.logo
-{
-  height: 30px;
-}
-
-a:link
-{
-  text-decoration: none;
-  color:black;
-}
-
-#portfolio:link
-{
-  text-decoration: none;
-  color:blue;
-}
-
-#portfolio:visited
-{
-  text-decoration: none;
-  color:#609;
-}
-
-#portfolio:hover
-{
-  text-decoration: underline;
-}
-
-a:visited
-{
-color:black;
-}
-
-p
-{
-  padding-left: 6px;
-  padding-right: 6px;
-  font-size: 1rem;
-}
-
-#vcard, #xp, #diplome, #tools
-{
-    margin-right:25px; /*problème superposition affichage*/
-}
-
+/*Règles spécifiques d'affichage sur petit écran*/
 @media all and (max-width: 1024px)
 {
+  /*Tout en colonne et centré*/
   #bloc_page
   {
     display:flex;
     flex-direction: column;
     justify-content: center;
     background-color: #EEEEEE;
-    max-width: 960px;
+  }
+
+  /*Faire apparaître le liseret et le contenu sur toute la largeur de la page
+  tout en gardant une marge de 5%*/
+  #liseret, #contenu
+  {
+    width:95%;
+    height:auto;
     margin: auto;
   }
 
-#liseret
-{
-  width:100%;
-  height:auto;
-}
+  /*Faire disparaître les sections perso, à propos et loisirs du liseret*/
+  #perso, #apropos, #fun
+  {
+    display:none;
+  }
 
-#perso, #A_propos, #fun
-{
-  display:none;
-}
+  /*Centrer la partie nom*/
+  #nom
+  {
+    text-align: center;
+  }
 
-#contenu
-{
-  display:flex;
-  flex-direction: column;
-  width:100%;
-}
+  /*pour aligner le séparateur avec le paragraphe au-dessus*/
+  #nom hr
+  {
+    margin-left: auto;
+  }
 
-#nom
-{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#perso2, #fun2, #A_propos2
-{
-  display:block;
-text-align: left;
-}
-
-h1
-{
-margin-bottom: 1rem;
-}
-
-h2,h3
-{
-  margin-bottom: 0;
-}
-
-#nom hr
-{
-  margin-left: auto;
-  margin-right:auto;
-}
-
+  /*afficher ces blocs en alignant le texte à gauche*/
+  #perso2, #fun2, #apropos2
+  {
+    display:block;
+    text-align: left;
+  }
 }
