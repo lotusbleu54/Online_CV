@@ -113,10 +113,11 @@ em
 }
 
 /*Mise en forme particulière du séparateur sous le nom*/
-#nom hr
+#petit
 {
   border: 0.1rem solid #00ACC1; /*Même couleur que liseret*/
   margin-left: 6px; /*pour aligner avec le paragraphe au-dessus*/
+  width:70px;
   margin-bottom: 3rem; /*Séparation avec partie suivante*/
 }
 
@@ -270,7 +271,7 @@ color:#181818;
   }
 
   /*pour aligner le séparateur avec le paragraphe au-dessus*/
-  #nom hr
+  #petit
   {
     margin-left: auto;
   }
