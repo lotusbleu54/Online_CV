@@ -109,6 +109,8 @@ em
 /*Pas de séparation entre le paragraphe de la partie "nom" et le séparateur*/
 #nom p
 {
+  font-size: 2rem;
+  color: #6E4A46;
   margin-bottom: 0;
 }
 
@@ -171,9 +173,9 @@ et dans le contenu si écran petit*/
 }
 
 /* Assurer marge minimale entre partie pro et langues*/
-#pro
+#pro, #soft
 {
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 /* Assurer marge minimale entre les icônes et les catégories*/
@@ -182,7 +184,7 @@ et dans le contenu si écran petit*/
     margin-right:20px;
 }
 
-/*Pas de mise en forme particulière pour les liens de la partie contact...*/
+/*Pas de mise en forme particulière pour les liens de la partie contact*/
 a:link
 {
   text-decoration: none;
@@ -193,40 +195,23 @@ a:visited
 color:#181818;
 }
 
-/*... Sauf pour le portfolio*/
-#portfolio:link
-{
-  text-decoration: none;
-  color:blue;
-}
-#portfolio:visited
-{
-  text-decoration: none;
-  color:#609;
-}
-#portfolio:hover
-{
-  text-decoration: underline;
-}
-
 /*Création des barres de progression pour les compétences pro et langues*/
 .progbar
 {
-    width: 150px;
-    height: auto;
-    border-radius: 0.4rem;
+    width: 100px;
+    border-radius: 0.5rem;
 }
 
 /*Choix des pourcentages de dégradé*/
-#frontend, #backend, #Anglais
+#frontend, #backend, #Anglais, #rigueur, #autonmie, #ecoute
 {
   background: linear-gradient(to right, #00ACC1 90%, #6E4A46 10%);
 }
-#Sass, #MySQL, #Python
+#Sass, #MySQL, #Python, #Chinois
 {
   background: linear-gradient(to right, #00ACC1 70%, #6E4A46 30%);
 }
-#SEO, #Espagnol, #Chinois
+#SEO, #Espagnol
 {
   background: linear-gradient(to right, #00ACC1 50%, #6E4A46 50%);
 }
