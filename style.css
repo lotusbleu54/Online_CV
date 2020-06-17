@@ -211,13 +211,9 @@ color:#181818;
 {
   background: linear-gradient(to right, #00ACC1 70%, #6E4A46 30%);
 }
-#SEO, #Espagnol
+#SEO, #Espagnol, #Java
 {
   background: linear-gradient(to right, #00ACC1 50%, #6E4A46 50%);
-}
-#Java
-{
-  background: linear-gradient(to right, #00ACC1 40%, #6E4A46 60%);
 }
 
 
