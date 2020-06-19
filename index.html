@@ -17,12 +17,12 @@
   </head>
 
   <body>
-    <div id="bloc_page">
-      <div id="liseret">
+    <main> <!--Bloc page-->
+      <aside> <!--Liseret-->
         <div>
           <img src="images/damien.jpg" id="photo" alt="Photo de Damien"/>
         </div>
-        <div id="perso">
+        <section id="perso">
           <h2 class="cote"> CONTACT </h2>
           <table>
             <tr>
@@ -47,32 +47,32 @@
               <td><a href="https://lotusbleu54.github.io">lotusbleu54.github.io</a></td>
             </tr>
           </table>
-        </div>
-        <div id="apropos">
+        </section>
+        <section id="apropos">
           <!-- Création classe "cote" pour mettre en forme spécifiquement les titres de section du liseret-->
           <h2 class="cote"> A PROPOS DE MOI </h2>
           <p> Après 10 ans en tant qu'ingénieur de développement systèmes dans l'industrie aéronautique, je me suis reconverti dans le développement web fullstack</p>
-        </div>
-        <div id="fun">
+        </section>
+        <section id="fun">
           <h2 class="cote"> LOISIRS </h2>
           <div class="loisirs">
             <i class="fas fa-hiking fa-3x" style="color:#43A047"></i>
             <i class="fas fa-language fa-3x"></i>
             <i class="fas fa-plane-departure fa-3x" style="color:#3F51B5"></i>
           </div>
-        </div>
-      </div> <!-- Fin du liseret-->
+        </section>
+      </aside> <!-- Fin du liseret-->
 
       <!-- Bloc contenant expérience, formation et compétences ainsi que contact, à propos et loisirs sur petit écran -->
       <div id="contenu">
-        <div id="nom">
+        <section id="nom">
           <h1> <em>Damien </em> MAGHE</h1>
           <p>Développeur web fullstack</p>
           <hr id="petit">
-        </div>
+        </section>
 
         <!-- Répétition de la partie Contact pour affichage petit écran-->
-        <div class="categorie" id="perso2">
+        <section class="categorie" id="perso2">
           <h2><i class="fas fa-address-card" id="vcard" style="color:#00ACC1"></i> CONTACT </h2>
           <hr>
           <table>
@@ -97,17 +97,17 @@
               <td><a href="https://lotusbleu54.github.io">lotusbleu54.github.io</a></td>
             </tr>
           </table>
-        </div>
+        </section>
 
         <!-- Répétition de la partie A propos pour affichage petit écran-->
-        <div class="categorie" id="apropos2">
+        <section class="categorie" id="apropos2">
           <h2> A PROPOS DE MOI </h2>
           <hr>
           <p> Après 10 ans en tant qu'ingénieur de développement systèmes dans l'industrie aéronautique, je me suis reconverti dans le développement web fullstack</p>
-        </div>
+        </section>
 
         <!-- Partie Compétences-->
-        <div class="categorie">
+        <section class="categorie">
           <h2> <i class="fas fa-tools" id="tools" style="color:#00ACC1"></i> Competences </h2>
           <hr>
           <div id="competences">
@@ -184,10 +184,10 @@
               </table>
             </div>
           </div>
-        </div> <!--Fin de la partie Compétences-->
+        </section> <!--Fin de la partie Compétences-->
 
         <!--Partie formation-->
-        <div class="categorie">
+        <section class="categorie">
           <h2><i class="fas fa-graduation-cap" id="diplome" style="color:#00ACC1"></i> Formation </h2>
           <hr>
           <table>
@@ -200,10 +200,10 @@
               <td> Ingénieur en informatique et systèmes automatisés, ENSEM Nancy </td>
             </tr>
           </table>
-        </div>
+        </section>
 
         <!--Partie expérience professionnelle-->
-        <div class="categorie">
+        <section class="categorie">
           <h2><i class="fas fa-suitcase" id="xp" style="color:#00ACC1"></i> Experience </h2>
           <hr>
           <table>
@@ -216,10 +216,10 @@
             <td> Stage en algorithmique et programmation - industrie aéronautique </td>
             </tr>
           </table>
-        </div>
+        </section>
 
         <!-- Répétition de la partie Loisirs sur petit écran-->
-        <div class = "categorie" id="fun2">
+        <section class = "categorie" id="fun2">
           <h2> LOISIRS </h2>
           <hr>
           <div class="loisirs">
@@ -227,8 +227,8 @@
             <i class="fas fa-language fa-4x" style="color:#f44336"></i>
             <i class="fas fa-plane-departure fa-4x" style="color:#3F51B5"></i>
           </div>
-        </div> <!--Fin de la partie Loisirs-->
+        </section> <!--Fin de la partie Loisirs-->
       </div> <!-- Fin du bloc "Contenu"-->
-    </div> <!--Fin du bloc page-->
+    </main> <!--Fin du bloc page-->
   </body>
 </HTML>

@@ -19,7 +19,7 @@ body
 }
 
 /*Affichage du liseret et du contenu en 2 blocs horizontaux sur 1200px (grand écran)*/
-#bloc_page
+main
 {
   display:flex;
   background-color: #EEEEEE;
@@ -28,7 +28,7 @@ body
 }
 
 /*liseret de 30% de la page. Contenu centré et chaque catégorie espacée en hauteur*/
-#liseret
+aside
 {
   width: 30%;
   background-color: #00ACC1;
@@ -221,7 +221,7 @@ color:#181818;
 @media all and (max-width: 1024px)
 {
   /*Tout en colonne et centré*/
-  #bloc_page
+  main
   {
     display:flex;
     flex-direction: column;
@@ -231,7 +231,7 @@ color:#181818;
 
   /*Faire apparaître le liseret et le contenu sur toute la largeur de la page
   tout en gardant une marge de 5%*/
-  #liseret, #contenu
+  aside, #contenu
   {
     width:95%;
     height:auto;
