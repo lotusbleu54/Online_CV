@@ -1,2 +1,2 @@
-# lotusbleu54.github.io
-CV de Damien Maghe
+# Online_CV
+CV web au format responsive codé en HTML et CSS purs
